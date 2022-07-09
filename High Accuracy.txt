@@ -1,0 +1,61 @@
+Problem
+There are 100 questions in a paper. Each question carries +3 marks for correct answer, -1 marks for incorrect answer and 0 marks for unattempted question.
+
+It is given that Chef received exactly X (0 \leq X \leq 100)(0≤X≤100) marks. Determine the minimum number of problems Chef marked incorrect.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+Each testcase contains of a single integer X, marks that Chef received.
+
+Output Format
+For each test case, output the minimum number of problems Chef marked incorrect.
+
+Sample 1:
+
+Input-
+4
+0
+100
+32
+18
+
+Output-
+0
+2
+1
+0
+
+Code- 
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int T;
+	cin>>T;
+	
+	while(T>0){
+	    int X;
+	    cin>>X;  // Marks that the Chef received 
+	    
+	    int W; // W = wrong answers (output)
+	    
+	    if(X%3==0){
+	        W = 0;
+	        cout<<W<<endl;
+	    }
+	    
+	    else if(X%3==1){
+	        W = 2;
+	        cout<<W<<endl;
+	    }
+	    else if(X%3==2){
+	        W = 1;
+	        cout<<W<<endl;
+	    }
+	    
+	    
+	    T--;  
+	}
+	return 0;
+}
